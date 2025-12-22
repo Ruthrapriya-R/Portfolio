@@ -5,15 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ruthrapriya R — Full Stack Engineer</title>
 <meta name="description" content="2025 Graduate & Full-Stack Developer ready to build modern web apps.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 <style>
-/* --- CORE VARIABLES & RESET --- */
 :root{
   --bg0:#0f1020; --bg1:#1a1c34; --txt:#eaf2ff; --muted:#a6b3d6;
   --p:#7c3aed; --p2:#06b6d4; --g1:#7c3aed; --g2:#06b6d4; --g3:#22d3ee;
@@ -32,7 +29,6 @@ html,body{
   scroll-behavior: smooth;
 }
 
-/* --- LAYOUT UTILITIES --- */
 .container{
   max-width:1100px;
   margin:0 auto;
@@ -40,11 +36,9 @@ html,body{
   width: 100%;
 }
 .grid{display:grid;gap:24px}
-/* Offset for sticky header so it doesn't cover titles */
 section { scroll-margin-top: 100px; }
 .sec{margin:60px 0 40px}
 
-/* --- FULL WIDTH NAVBAR --- */
 nav {
   position: sticky;
   top: 0;
@@ -62,7 +56,6 @@ nav {
 }
 .brand{font-weight:800;letter-spacing:.3px; font-size: 20px; color: white;}
 
-/* --- BUTTONS --- */
 .btn{
   display:inline-flex;align-items:center;gap:8px;padding:10px 16px;
   border-radius:12px;background:linear-gradient(135deg,var(--g1),var(--g2));
@@ -75,10 +68,8 @@ nav {
 .btn:hover{transform: translateY(-2px); box-shadow:0 8px 25px rgba(124,58,237,.4);}
 .btn.ghost{background:transparent;border:1px solid rgba(166,179,214,.25);box-shadow:none}
 .btn.ghost:hover{background: rgba(166,179,214,.05); border-color: rgba(166,179,214,.5);}
-/* Icon styles for buttons */
 .btn svg { width: 18px; height: 18px; fill: currentColor; }
 
-/* --- HERO SECTION --- */
 .hero{display:grid;grid-template-columns:1.2fr 0.8fr;gap:50px;align-items:center;padding:80px 0 100px}
 @media (max-width:860px){.hero{grid-template-columns:1fr; padding: 40px 0; text-align: center;} .photo{order:-1; justify-content: center;}}
 
@@ -94,14 +85,12 @@ h1{
 .tag{color:var(--p2);font-weight:700;margin-bottom:20px; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px;}
 p{margin:0 0 12px; font-size: 18px; color: #c3d5ff; line-height: 1.7;}
 
-/* --- FLOATING ANIMATION --- */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
 }
 
-/* Photo Styling */
 .photo {
   position: relative;
   display: flex;
@@ -118,7 +107,6 @@ p{margin:0 0 12px; font-size: 18px; color: #c3d5ff; line-height: 1.7;}
   animation: float 6s ease-in-out infinite; 
 }
 
-/* --- GLASS CARDS --- */
 .card {
   background: rgba(26, 28, 52, 0.5);
   backdrop-filter: blur(12px);
@@ -140,7 +128,6 @@ p{margin:0 0 12px; font-size: 18px; color: #c3d5ff; line-height: 1.7;}
 }
 .card h3{margin:0 0 10px;font-size:22px; color: white;}
 
-/* --- ANIMATIONS (SCROLL REVEAL) --- */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -151,7 +138,6 @@ p{margin:0 0 12px; font-size: 18px; color: #c3d5ff; line-height: 1.7;}
   transform: translateY(0);
 }
 
-/* --- SKILLS (NEW ICON STYLE) --- */
 .kbd {
   display: inline-flex;
   align-items: center;
@@ -171,13 +157,12 @@ p{margin:0 0 12px; font-size: 18px; color: #c3d5ff; line-height: 1.7;}
   transform: translateY(-2px);
   border-color: var(--p);
 }
-.kbd i { font-size: 18px; } /* Icon size */
+.kbd i { font-size: 18px; } 
 
 .skills{display:flex;flex-wrap:wrap; margin-bottom: 15px;}
-/* Updated Grid for Single Project to be centered or stretch */
+
 .cards{display:grid; grid-template-columns: 1fr; gap:24px; max-width: 800px; margin: 0 auto;} 
 
-/* --- FOOTER & MISC --- */
 .small{color:var(--muted);font-size:14px}
 .site-footer{
   width: 100%;
@@ -200,7 +185,6 @@ a:hover{color: var(--g3);}
   font-size: 12px; font-weight: 700; color: #fff;
 }
 
-/* --- CONTACT FORM --- */
 .contact-grid {
   display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px;
 }
@@ -229,7 +213,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       <div class="badges">
         <a class="btn ghost" href="#skills" style="border:none; color: var(--txt); box-shadow:none;">Skills</a>
         <a class="btn ghost" href="#projects" style="border:none; color: var(--txt); box-shadow:none;">Projects</a>
-        <a class="btn ghost" href="RUTHRAPRIYA_RESUME.pdf" download>Resume</a>
+        <a class="btn ghost" href="RUTHRAPRIYA_RESUME.pdf" target="_blank">View Resume</a>
         <a class="btn" href="#contact">Contact</a>
       </div>
     </div>
@@ -390,12 +374,12 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   </div> <footer class="site-footer">
     <div class="container footer-content">
       <span>© 2025 Ruthrapriya R · Built in Theni, India</span>
-      <span><a href="RUTHRAPRIYA_RESUME.pdf" download style="text-decoration: underline;">Download Resume</a></span>
+      <span>
+        <a href="RUTHRAPRIYA_RESUME.pdf" download style="text-decoration: underline;">Download Resume</a></span>
     </div>
   </footer>
 
 <script>
-  // SCROLL REVEAL ANIMATION
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {
@@ -408,9 +392,8 @@ textarea.form-input { resize: vertical; min-height: 120px; }
     }
   }
   window.addEventListener("scroll", reveal);
-  reveal(); // Trigger on load
+  reveal(); 
 
-  // FORMSPREE AJAX SCRIPT (Prevents Redirect)
   var form = document.getElementById("my-form");
   
   async function handleSubmit(event) {
@@ -427,15 +410,15 @@ textarea.form-input { resize: vertical; min-height: 120px; }
     }).then(response => {
       if (response.ok) {
         status.innerHTML = "✅ Thanks! Message sent successfully.";
-        status.style.color = "#4ade80"; // Green color
-        form.reset(); // Clears the form inputs
+        status.style.color = "#4ade80"; 
+        form.reset(); 
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
             status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
           } else {
             status.innerHTML = "❌ Oops! There was a problem submitting your form"
-            status.style.color = "#ef4444"; // Red color
+            status.style.color = "#ef4444"; 
           }
         })
       }
