@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 :root{
@@ -160,6 +161,8 @@ p{margin:0 0 12px; font-size: 18px; color: #c3d5ff; line-height: 1.7;}
 .kbd i { font-size: 18px; } 
 
 .skills{display:flex;flex-wrap:wrap; margin-bottom: 15px;}
+.tags{margin-top: auto; margin-bottom: 20px; display:flex; flex-wrap:wrap; gap:8px;}
+.tags span { font-size: 0.85em; background: rgba(255,255,255,0.05); padding: 4px 8px; border-radius: 6px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px;}
 
 .cards{display:grid; grid-template-columns: 1fr; gap:24px; max-width: 800px; margin: 0 auto;} 
 
@@ -184,6 +187,8 @@ a:hover{color: var(--g3);}
   background:rgba(124,58,237,.2); border:1px solid rgba(124,58,237,.4);
   font-size: 12px; font-weight: 700; color: #fff;
 }
+
+.links { display: flex; gap: 10px; margin-top: 10px; }
 
 .contact-grid {
   display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px;
@@ -241,16 +246,13 @@ textarea.form-input { resize: vertical; min-height: 120px; }
         
         <div class="badges" style="margin-top:24px">
           <a class="btn ghost" href="https://www.linkedin.com/in/ruthrapriya-r-848b332a0" target="_blank" rel="noreferrer">
-            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            LinkedIn
+            <i class="fab fa-linkedin"></i> LinkedIn
           </a>
           <a class="btn ghost" href="https://github.com/Ruthrapriya-R" target="_blank" rel="noreferrer">
-            <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            GitHub
+            <i class="fab fa-github"></i> GitHub
           </a>
           <a class="btn ghost" href="mailto:ruthrapriyaar@gmail.com">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            Email
+            <i class="fas fa-envelope"></i> Email
           </a>
         </div>
       </div>
@@ -292,25 +294,53 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </section>
 
-    <section class="sec" id="projects">
-      <h2 class="reveal">Featured Projects</h2>
-      <div class="cards">
-        
-        <div class="card reveal">
-          <div style="display:flex; justify-content:space-between; align-items:start; margin-bottom: 12px;">
-            <h3>OrderSmart</h3>
-            <span class="badge">Featured</span>
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+        <div class="card">
+          <div class="project-info">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3>OrderSmart</h3>
+              <span class="badge" style="background: #6b21a8; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em;">Featured</span>
+            </div>
+            <p>OrderSmart makes ordering easy and management smarter. Users place orders in seconds, and admins handle everything from products to orders with ease.</p>
+            <div class="tags">
+              <span><i class="fab fa-react"></i> React</span>
+              <span><i class="fab fa-node-js"></i> Node.js</span>
+              <span>Express</span>
+              <span><i class="fas fa-database"></i> MongoDB</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/Ruthrapriya-R/OrderSmart" target="_blank" class="btn ghost">
+                <i class="fab fa-github"></i> Code
+              </a>
+              
+              <a href="https://youtu.be/WKIfdX8b8mk" target="_blank" class="btn" style="background: linear-gradient(135deg, #ff0000, #ff4d4d);">
+                <i class="fas fa-play-circle"></i> Watch Demo
+              </a>
+            </div>
           </div>
-          <p class="small" style="flex-grow: 1;">OrderSmart makes ordering easy and management smarter. Users place orders in seconds, and admins handle everything from products to orders with ease.</p>
-          <div class="skills">
-            <span class="kbd"><i class="devicon-react-original colored"></i> React</span>
-            <span class="kbd"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
-            <span class="kbd"><i class="devicon-express-original colored"></i> Express</span>
-            <span class="kbd"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
-          </div>
-          <div style="margin-top:20px; display:flex; gap:10px;">
-            <a href="https://github.com/Ruthrapriya-R/OrderSmart" target="_blank" class="btn ghost">View Code</a>
-            <a href="#" target="_blank" class="btn">Live Demo</a>
+        </div>
+
+        <div class="card">
+          <div class="project-info">
+            <h3>Food Rescue</h3>
+            <p>A web platform connecting food donors with NGOs to reduce food waste and help the needy. Features real-time requests and location tracking.</p>
+            <div class="tags">
+              <span><i class="fab fa-html5"></i> HTML/CSS</span>
+              <span><i class="fab fa-js"></i> JavaScript</span>
+              <span><i class="fas fa-fire"></i> Firebase</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/Ruthrapriya-R/FoodRescue" target="_blank" class="btn ghost">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://ruthrapriya-r.github.io/FoodRescue/" target="_blank" class="btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
           </div>
         </div>
 
@@ -377,7 +407,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
     <div class="container footer-content">
       <span>© 2025 Ruthrapriya R · Built in Theni, India</span>
       <span>
-        <a href="RUTHRAPRIYA_RESUME.pdf" download style="text-decoration: underline;">Download Resume</a></span>
+        <a href="RUTHRAPRIYA_RESUME.pdf" target="_blank" style="text-decoration: underline;">View Resume</a></span>
     </div>
   </footer>
 
